@@ -4,8 +4,6 @@ from django.contrib.auth.admin import UserAdmin
 
 from account.models import CustomUserModel
 
-@admin.register(CustomUserModel)
-
 class CustomAdmin(UserAdmin):
     
     list_display = ('username','email')
@@ -15,6 +13,6 @@ class CustomAdmin(UserAdmin):
         }),
     )
     
-
+admin.site.register(CustomUserModel, CustomAdmin)    
 
 # Register your models here.

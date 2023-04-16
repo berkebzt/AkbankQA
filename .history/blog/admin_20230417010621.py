@@ -25,5 +25,5 @@ class CommunicationAdmin(admin.ModelAdmin):
     list_display = ('email','create_time')
     search_fields = ('email',)
     
-   
+admin.site.register(CommunicationModel,CommunicationAdmin)     
 # Register your models here.
