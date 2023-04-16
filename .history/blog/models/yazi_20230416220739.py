@@ -16,4 +16,4 @@ class WriteModel(models.Model):
     class Meta:
         verbose_name='Writing'
         verbose_name_plural='Writings'
-        db_name = 'Writing' 
+        db_name = 'Writing'
