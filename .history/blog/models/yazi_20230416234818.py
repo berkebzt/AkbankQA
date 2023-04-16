@@ -7,7 +7,7 @@ from ckeditor.fields import RichTextField
 class WriteModel(models.Model):
     img = models.ImageField( upload_to='writing_images')
     title = models.CharField(max_length=50)
-    content = RichTextField()
+    content = models.TextField()
     create_time = models.DateTimeField(auto_now_add=True)
     edit_time = models.DateTimeField(auto_now=True)
     slug = AutoSlugField(populate_from = 'title', unique=True)
