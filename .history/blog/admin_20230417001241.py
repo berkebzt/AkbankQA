@@ -18,5 +18,5 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ('yazan','create_time','edit_time')
     search_fields = ('yazan__username',)
     
-admin.site.register(CommentModel,CommentAdmin)    
+admin.site.register()    
 # Register your models here.
