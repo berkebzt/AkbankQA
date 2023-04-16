@@ -21,8 +21,8 @@ class CommentAdmin(admin.ModelAdmin):
 admin.site.register(CommentModel,CommentAdmin)    
 
 class CommunicationAdmin(admin.ModelAdmin):
-    list_display = ('email','create_time')
-    search_fields = ('email',)
+    list_display = ('email','create_time','edit_time')
+    search_fields = ('yazan__username',)
     
 admin.site.register(CommunicationModel,CommunicationAdmin)     
 # Register your models here.

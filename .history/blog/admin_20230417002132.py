@@ -1,6 +1,6 @@
 from django.contrib import admin
 from blog.models import (
-    CategoryModel,WriteModel,CommentModel,CommunicationModel
+    CategoryModel,WriteModel,CommentModel
     )
 
 
@@ -21,8 +21,6 @@ class CommentAdmin(admin.ModelAdmin):
 admin.site.register(CommentModel,CommentAdmin)    
 
 class CommunicationAdmin(admin.ModelAdmin):
-    list_display = ('email','create_time')
-    search_fields = ('email',)
-    
-admin.site.register(CommunicationModel,CommunicationAdmin)     
+    list_display = ('yazan','create_time','edit_time')
+    search_fields = ('yazan__username',)
 # Register your models here.
